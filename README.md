@@ -22,4 +22,10 @@ to train the model.
 ## Training
 The model is trained using SGD with a momentum of 0.9 and a batch size of 16. The training schedule follows that in the paper, and horizontal flipping is applied as the only data augmentation step.
 
+## Inference
+To perform inference, run
+```
+python infer_fcos_coco.py -t 0.25 -u 0.25 -s false -i kite.jpg
+```
+which generates the heatmap of detected objects as well as the boxes of the detected objects.
 
