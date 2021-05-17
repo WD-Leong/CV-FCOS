@@ -2,7 +2,9 @@
 This repository contains my implementation of the Fully Convolutional One-Stage Object Detection([FCOS](https://arxiv.org/abs/1904.01355)) object detection architecture. Please note that the codes in this repository is still work-in-progress.
 
 ## Architecture of FCOS
-As shown in Fig. 1, the FCOS architecture includes the Feature Pyramid Network (FPN) but adds separate classification and regression heads. In this code, the original FCOS algorithm is modified to follow a regression similar to that of [YOLOv3](https://arxiv.org/abs/1804.02767). This code also one target label in its corresponding feature map (P3 to P7) based on the centroid of the bounding box. The input image is also resized to dimensions of 512 by 512 or 640 by 640, depending on the processing capabilities of the GPU hardware. In general, an Nvidia Quadro P1000 graphics card is able to train on a 512 by 512 image using the COCO dataset.
+As shown in Fig. 1, the FCOS architecture includes the Feature Pyramid Network (FPN) but adds separate classification and regression heads. In this code, the original FCOS algorithm is modified to follow a regression similar to that of [YOLOv3](https://arxiv.org/abs/1804.02767). This code also assigns one target label in its corresponding feature map (P3 to P7) based on the centroid of the bounding box. 
+
+Other modifications include retaining batch normalisation instead of group normalisation as well as the use of the C5 output rather than the P5 output. The input image is also resized to dimensions of 512 by 512 or 640 by 640, ignoring the aspect ratio, depending on the processing capabilities of the GPU hardware. In general, an Nvidia Quadro P1000 graphics card is able to train on a 512 by 512 image using the COCO dataset.
 
 ![FCOS Architecture](FCOS_architecture.JPG)
 Fig. 1: The original FCOS Architecture (as shown in the [FCOS](https://arxiv.org/abs/1904.01355) paper).
@@ -25,7 +27,7 @@ The model is trained using SGD with a momentum of 0.9 and a batch size of 16. Th
 ## Inference
 To perform inference, run
 ```
-python infer_fcos_coco.py -t 0.25 -u 0.25 -s false -i kite.jpg
+python infer_fcos_coco.py -t 0.30 -u 0.25 -s false -i kite.jpg
 ```
 which generates the heatmap of detected objects as well as the boxes of the detected objects.
 
