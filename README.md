@@ -57,6 +57,6 @@ A sample of the detection results are provided in this section.
 For the COCO model:
 | Detection Heatmap | Detection Results |
 | ----------------- | ----------------- |
-![coco_heatmap_1](coco_detect_heatmap_1.jpg) | ![coco_result_1](coco_detection_result_1.jpg) |
+![coco_heatmap_1](Results/coco_detect_heatmap_1.jpg) | ![coco_result_1](Results/coco_detection_result_1.jpg) |
 
 
