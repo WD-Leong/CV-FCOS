@@ -49,7 +49,7 @@ python infer_fcos_coco.py -t 0.30 -u 0.25 -s true -r true -i <path_to_image_jpeg
 python infer_fcos_crowd.py -t 0.30 -u 0.25 -s true -r true -i <path_to_image_jpeg_file>
 python infer_fcos_people.py -t 0.30 -u 0.25 -s true -r true -f 0.50 -i <path_to_image_jpeg_file>
 ```
-for the COCO model, Crowd Human (Face) model or Person model respectively.
+for the COCO model, Crowd Human (Face) model or Person model respectively. Note that the model should be saved in a folder `TF_Models` which is one level above the `infer_fcos_<model>.py` code.
 
 ## Sample Detection Results
 A sample of the detection results are provided in this section.
@@ -58,4 +58,12 @@ A sample of the detection results are provided in this section.
 | ----- | ----------------- | ----------------- |
 | COCO | ![coco_heatmap_1](Results/coco_detect_heatmap_1.jpg) | ![coco_result_1](Results/coco_detection_result_1.jpg) |
 | Person | ![beach_heatmap_1](Results/beach_detection_heatmap_1.jpg) | ![beach_result_1](Results/beach_detection_results_1.jpg) |
+
+Some further results of the Crowd Human (Face) and Person models:
+| Model | Detection Results |
+| ----- | ----------------- |
+| Person | ![beach_result_2](Results/beach_detection_results_2.jpg) |
+| Person | ![beach_result_3](Results/beach_detection_results_3.jpg) |
+| Crowd Human (Face) | ![crowd_result_1](Results/head_detection_results_1.jpg) |
+| Crowd Human (Face) | ![crowd_result_2](Results/head_detection_results_2.jpg) |
 
