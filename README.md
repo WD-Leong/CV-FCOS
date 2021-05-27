@@ -64,6 +64,6 @@ Some further results of the Crowd Human (Face) and Person models:
 | ----- | ----------------- |
 | Person | ![beach_result_2](Results/beach_detection_results_2.jpg) |
 | Person | ![beach_result_3](Results/beach_detection_results_3.jpg) |
-| Crowd Human (Face) | ![crowd_result_1](Results/head_detection_results_1.jpg) |
-| Crowd Human (Face) | ![crowd_result_2](Results/head_detection_results_2.jpg) |
+| Crowd Human (Face) | ![crowd_result_1](Results/head_detection_result_1.jpg) |
+| Crowd Human (Face) | ![crowd_result_2](Results/head_detection_result_2.jpg) |
 
