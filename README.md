@@ -54,9 +54,8 @@ for the COCO model, Crowd Human (Face) model or Person model respectively.
 ## Sample Detection Results
 A sample of the detection results are provided in this section.
 
-For the COCO model:
-| Detection Heatmap | Detection Results |
-| ----------------- | ----------------- |
-![coco_heatmap_1](Results/coco_detect_heatmap_1.jpg) | ![coco_result_1](Results/coco_detection_result_1.jpg) |
-
+| Model | Detection Heatmap | Detection Results |
+| ----- | ----------------- | ----------------- |
+| COCO | ![coco_heatmap_1](Results/coco_detect_heatmap_1.jpg) | ![coco_result_1](Results/coco_detection_result_1.jpg) |
+| Person | ![beach_heatmap_1](Results/beach_detect_heatmap_1.jpg) | ![beach_result_1](Results/beach_detection_result_1.jpg) |
 
