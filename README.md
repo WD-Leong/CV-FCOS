@@ -31,3 +31,10 @@ python infer_fcos_coco.py -t 0.30 -u 0.25 -s false -i kite.jpg
 ```
 which generates the heatmap of detected objects as well as the boxes of the detected objects.
 
+## Pre-Trained Models
+The modified FCOS model is trained using an Nvidia V100 32GB GPU with the input image dimensions set to 1280 by 1280. The pre-trained models can be downloaded via:
+
+| Model Name | Link |
+| ---------- | ---- |
+
+
