@@ -36,5 +36,27 @@ The modified FCOS model is trained using an Nvidia V100 32GB GPU with the input 
 
 | Model Name | Link |
 | ---------- | ---- |
+| COCO dataset | https://github.com/WD-Leong/CV-FCOS/releases/download/v0.9/coco_model_1280.zip |
+| COCO (Person) and Crowd Human | https://github.com/WD-Leong/CV-FCOS/releases/download/v0.9/person_model_1280.zip |
+| Crowd Human (Face) dataset | https://github.com/WD-Leong/CV-FCOS/releases/download/v0.9/crowd_human_model_1280.zip |
+
+The COCO model is trained for 1x LR schedule (90k iterations), the COCO (Person) and Crowd Human model is trained for 77.5k iterations and the Crowd Human (Face) model is trained for 20k iterations. The COCO (Person) and Crowd Human model is trained to detect humans and will be referred to as the Person model in the later sections.
+
+## Inference only
+To perform inference using the pre-trained model, run either of the following codes
+```
+python infer_fcos_coco.py -t 0.30 -u 0.25 -s true -r true -i <path_to_image_jpeg_file>
+python infer_fcos_crowd.py -t 0.30 -u 0.25 -s true -r true -i <path_to_image_jpeg_file>
+python infer_fcos_people.py -t 0.30 -u 0.25 -s true -r true -f 0.50 -i <path_to_image_jpeg_file>
+```
+for the COCO model, Crowd Human (Face) model or Person model respectively.
+
+## Sample Detection Results
+A sample of the detection results are provided in this section.
+
+For the COCO model:
+| Detection Heatmap | Detection Results |
+| ----------------- | ----------------- |
+![coco_heatmap_1](coco_detect_heatmap_1.jpg) | ![coco_result_1](coco_detection_result_1.jpg) |
 
 
