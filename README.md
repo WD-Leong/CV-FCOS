@@ -57,5 +57,5 @@ A sample of the detection results are provided in this section.
 | Model | Detection Heatmap | Detection Results |
 | ----- | ----------------- | ----------------- |
 | COCO | ![coco_heatmap_1](Results/coco_detect_heatmap_1.jpg) | ![coco_result_1](Results/coco_detection_result_1.jpg) |
-| Person | ![beach_heatmap_1](Results/beach_detect_heatmap_1.jpg) | ![beach_result_1](Results/beach_detection_result_1.jpg) |
+| Person | ![beach_heatmap_1](Results/beach_detection_heatmap_1.jpg) | ![beach_result_1](Results/beach_detection_results_1.jpg) |
 
