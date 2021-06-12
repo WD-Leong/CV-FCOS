@@ -79,3 +79,9 @@ To further enhance the model, the concepts in [RefineDet](https://arxiv.org/abs/
 
 ![refinedet_architecture](RefineDet_Architecture.JPG)
 Fig. 2: RefineDet architecture (taken from the [RefineDet](https://arxiv.org/abs/1711.06897) paper).
+
+To initiate the training process, run 
+```
+python train_fcos_refinedet_coco.py
+```
+to train the FCOS-RefineDet model on the Microsoft COCO dataset. 
