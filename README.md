@@ -77,4 +77,5 @@ Some further results of the Crowd Human (Face) and Person models:
 ## Enhancements
 To further enhance the model, the concepts in [RefineDet](https://arxiv.org/abs/1711.06897) were incorporated in `fcos_refinedet_module.py`. In particular, RefineDet uses an Anchor Refinement Module (ARM) and an Object Detection Module (ODM) to enhance the detection results by allowing the ODM work further on the predictions in the ARM. 
 
-
+![refinedet_architecture](RefineDet_Architecture.JPG)
+Fig. 2: RefineDet architecture (taken from the [RefineDet](https://arxiv.org/abs/1711.06897) paper).
