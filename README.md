@@ -84,4 +84,8 @@ To initiate the training process, run
 ```
 python train_fcos_refinedet_coco.py
 ```
-to train the FCOS-RefineDet model on the Microsoft COCO dataset. 
+to train the FCOS-RefineDet model on the Microsoft COCO dataset, and
+```
+python infer_fcos_refinedet_coco.py -t 0.30 -u 0.25 -s true -i <image_file_name>.jpg
+```
+to perform inference.
