@@ -1,8 +1,15 @@
 # Fully Convolutional One-Stage Object Detection (FCOS)
-This repository contains my implementation of the Fully Convolutional One-Stage Object Detection([FCOS](https://arxiv.org/abs/1904.01355)) object detection architecture. Please note that the codes in this repository is still work-in-progress.
+This repository contains my implementation of the Fully Convolutional One-Stage Object Detection ([FCOS](https://arxiv.org/abs/1904.01355)) object detection architecture. Please note that the codes in this repository is still work-in-progress.
 
 ## Architecture of FCOS
-As shown in Fig. 1, the FCOS architecture includes the Feature Pyramid Network (FPN) but adds separate classification and regression heads. In this code, the original FCOS algorithm is modified to follow a regression similar to that of [YOLOv3](https://arxiv.org/abs/1804.02767). This code also assigns one target label in its corresponding feature map (P3 to P7) based on the centroid of the bounding box. 
+As shown in Fig. 1, the FCOS architecture includes the Feature Pyramid Network (FPN) but adds separate classification and regression heads. In this code, the original FCOS algorithm is modified to follow a regression similar to that of [YOLOv3](https://arxiv.org/abs/1804.02767). This code also assigns one target label in its corresponding feature map (P3 to P7) based on the centroid of the bounding box. In particular, the regression has the form:
+```
+x_off = sigmoid(feature_map[x, y]) * stride
+y_off = sigmoid(feature_map[x, y]) * stride
+box_w = sigmoid(feature_map[x, y]) * feature_scale * stride
+box_h = sigmoid(feature_map[x, y]) * feature_scale * stride
+```
+and the regression outputs are given by `[x_off, y_off, box_w, box_h]`.
 
 Other modifications include retaining batch normalisation instead of group normalisation as well as the use of the C5 output rather than the P5 output. The input image is also resized to dimensions of 512 by 512 or 640 by 640, ignoring the aspect ratio, depending on the processing capabilities of the GPU hardware. In general, an Nvidia Quadro P1000 graphics card is able to train on a 512 by 512 image using the COCO dataset.
 
@@ -66,4 +73,8 @@ Some further results of the Crowd Human (Face) and Person models:
 | Person | ![beach_result_3](Results/beach_detection_results_3.jpg) |
 | Crowd Human (Face) | ![crowd_result_1](Results/head_detection_result_1.jpg) |
 | Crowd Human (Face) | ![crowd_result_2](Results/head_detection_result_2.jpg) |
+
+## Enhancements
+To further enhance the model, the concepts in [RefineDet](https://arxiv.org/abs/1711.06897) were incorporated in `fcos_refinedet_module.py`. In particular, RefineDet uses an Anchor Refinement Module (ARM) and an Object Detection Module (ODM) to enhance the detection results by allowing the ODM work further on the predictions in the ARM. 
+
 
