@@ -74,7 +74,7 @@ Some further results of the Crowd Human (Face) and Person models:
 | Crowd Human (Face) | ![crowd_result_1](Results/head_detection_result_1.jpg) |
 | Crowd Human (Face) | ![crowd_result_2](Results/head_detection_result_2.jpg) |
 
-## Enhancements
+## RefineDet Enhancement
 To further enhance the model, the concepts in [RefineDet](https://arxiv.org/abs/1711.06897) were incorporated in `fcos_refinedet_module.py`. In particular, RefineDet uses an Anchor Refinement Module (ARM) and an Object Detection Module (ODM) to enhance the detection results by allowing the ODM work further on the predictions in the ARM. 
 
 ![refinedet_architecture](RefineDet_Architecture.JPG)
@@ -89,3 +89,6 @@ to train the FCOS-RefineDet model on the Microsoft COCO dataset, and
 python infer_fcos_refinedet_coco.py -t 0.30 -u 0.25 -s true -i <image_file_name>.jpg
 ```
 to perform inference.
+
+## Attention Enhancement
+With attention mechanism from [Transformers](https://arxiv.org/abs/1706.03762) being increasingly applied to Computer Vision applications, the backbone model is enhanced with attention mechanism similar to [BoTNet](https://arxiv.org/abs/2101.11605).
