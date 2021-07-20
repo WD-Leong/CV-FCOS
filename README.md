@@ -90,5 +90,10 @@ python infer_fcos_refinedet_coco.py -t 0.30 -u 0.25 -s true -i <image_file_name>
 ```
 to perform inference.
 
+Example of detection using FCOS RefineDet architecture:
+| Heatmap | Detection |
+| ------- | --------- |
+| ![refinedet_heatmap_1](Results/fcos_refinedet_coco_heatmap.jpg) | ![refinedet_detect_1](Results/fcos_refinedet_coco_detect.jpg)
+
 ## Attention Enhancement
 With attention mechanism from [Transformers](https://arxiv.org/abs/1706.03762) being increasingly applied to Computer Vision applications, the backbone model is enhanced with attention mechanism similar to [BoTNet](https://arxiv.org/abs/2101.11605).
